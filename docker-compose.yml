@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  invoice-generator:
+    build: .
+    container_name: invoice-generator
+    volumes:
+      - .:/app
+    command: python app/generate_invoice.py
